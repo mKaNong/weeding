@@ -1,0 +1,17 @@
+<scroll-view scroll-y class="scrollPage">
+  <image src='/images/bg1.png' class='png' style='width:100%; height:230rpx; '></image>
+  <view class="text-show">
+    
+  <map
+      id="myMap"
+      style="width: 100%; height: calc(100vh - 230rpx);"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+      show-location
+      bindmarkertap="go"
+    ></map>
+
+  </view>
+  <view class='cu-tabbar-height'></view>
+</scroll-view>

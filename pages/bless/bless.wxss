@@ -1,0 +1,17 @@
+.pad10{
+  padding: 20rpx;
+}
+
+.loading{
+  bottom: 105rpx;
+  position: relative;
+  padding: 10rpx;
+  text-align: center;
+}
+
+.emoji-cls{
+  width: 42rpx; 
+  height: 42rpx; 
+  padding-left: 5rpx; 
+  margin-bottom: -10rpx
+}

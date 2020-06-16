@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "index": "/pages/index/index",
+    "bless": "/pages/bless/bless",
+    "photo": "/pages/photos/photo",
+    "navigate": "/pages/navigate/navigate"
+  }
+}

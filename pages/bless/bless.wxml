@@ -1,0 +1,57 @@
+<scroll-view scroll-y class="scrollPage" bindscrolltolower="loadMore" style="height: {{scrollHeight}}px; background: #ffffff">
+  <image src='/images/bg1.png' class='png' style='width:100%; height:230rpx; '></image> 
+  <view class="text-show">
+
+    <!-- 列表 -->
+    <view style="margin-bottom: 100rpx;">
+      <view wx:for="{{messages}}" wx:key="id" class="margin-bottom-sm">
+        <view class="cu-card dynamic no-card">
+          <view class="cu-item shadow" style="background: {{item.bgColor}}"> <!--  back  -->
+            <view class="cu-list menu-avatar">
+             <view class="cu-item" style="background: {{item.bgColor}}">  <!--  back  -->
+                <view class="cu-avatar round lg" style="background-image:url({{item.url}});"></view>
+                <view class="content flex-sub">
+                  <view>{{item.userName}}</view>
+                </view>
+              </view>
+            </view>
+            <view class="text-content">
+               {{item.message}}
+            </view>
+            <view class="flex p-xs mb-sm">
+              <view class="flex-twice padding-xs radius">
+                <view class="text-df text-left pad10">
+                  <text> {{item.createTime}} </text>
+                </view>
+              </view>
+              <view class="flex-sub padding-xs radius">
+                <view class="text-df text-right pad10">
+                  <text class="cuIcon-appreciatefill margin-lr-xs" data-id="{{item.id}}" bindtap="zanClick"> {{item.zan}} </text> 
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="loading" hidden="{{!loadMore}}">正在载入更多...</view>
+    <view class="loading" hidden="{{!loadAll}}">已加载全部</view>
+
+    <!-- 输入框 -->
+    <view class="cu-bar foot input" style="bottom: 100rpx">
+      <view class="action">
+        <!-- <text class="cuIcon-sound text-grey"></text> -->
+        <image src='/images/bless/input.png' class='png' style="width: 50rpx; height: 50rpx;" ></image> 
+      </view>
+      <input class="solid-bottom" bindinput="bindKeyInput" value='{{message}}' maxlength="300" 
+      cursor-spacing="10" placeholder="请输入您的祝福 ..."></input>
+      <view class="action">
+        <text class="cuIcon-emojifill text-grey" ></text>
+      </view>
+      <button class="cu-btn bg-green shadow" open-type="getUserInfo" bindgetuserinfo="getUserInfo">发送</button>
+    </view>
+
+  </view>
+  <view class='cu-tabbar-height'></view>
+</scroll-view>

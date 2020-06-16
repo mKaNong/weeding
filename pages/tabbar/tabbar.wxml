@@ -1,0 +1,38 @@
+<index wx:if="{{PageCur=='index'}}"></index>
+<bless wx:if="{{PageCur=='bless'}}"></bless>
+<photo wx:if="{{PageCur=='photo'}}"></photo>
+<navigate wx:if="{{PageCur=='navigate'}}"></navigate>
+
+<view class="cu-bar tabbar bg-white shadow foot">
+  <!-- index tab -->
+  <view class="action" bindtap="NavChange" data-cur="index">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/card{{PageCur=='index'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='index'?'text-red':'text-gray'}}">请柬</view>
+  </view>
+  <!-- bless tab -->
+  <view class="action" bindtap="NavChange" data-cur="bless">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/bless{{PageCur=='bless'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='bless'?'text-red':'text-gray'}}">祝福</view>
+  </view>
+
+  <!-- photo tab -->
+  <view class="action" bindtap="NavChange" data-cur="photo">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/photo{{PageCur=='photo'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='photo'?'text-red':'text-gray'}}">相册</view>
+  </view>
+
+    <!-- navigate tab -->
+  <view class="action" bindtap="NavChange" data-cur="navigate">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/map{{PageCur=='navigate'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='navigate'?'text-red':'text-gray'}}">导航</view>
+  </view>
+
+</view>

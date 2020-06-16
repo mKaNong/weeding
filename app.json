@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/tabbar/tabbar", 
+    "pages/index/index",
+    "pages/bless/bless",
+    "pages/photos/photo",
+    "pages/navigate/navigate"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}
