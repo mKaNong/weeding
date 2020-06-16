@@ -7,7 +7,7 @@
 3. 照片
 4. 导航
 
-![](assets/g.gif)
+![](g.gif)
 
 ## 1. 请柬首页
 index
